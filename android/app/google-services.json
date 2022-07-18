@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "362969943670",
+    "project_id": "bluecasecade",
+    "storage_bucket": "bluecasecade.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:362969943670:android:abe6b4d7cbd4754afb1957",
+        "android_client_info": {
+          "package_name": "com.example.bluecascade"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "362969943670-ifctfe7ese35d4vbt7icvsril1etgkkf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHEzt98EAc9Yw8dl2iJNJafkyvRfzZ_-Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "362969943670-ifctfe7ese35d4vbt7icvsril1etgkkf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

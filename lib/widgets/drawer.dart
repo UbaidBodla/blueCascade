@@ -27,7 +27,10 @@ class CustomDrawer extends StatelessWidget {
             leading: Icon(Icons.forward),
             title: const Text('Home'),
             onTap: () {
-              Navigator.canPop(context);
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (BuildContext context) => Home()));
             },
           ),
           ListTile(
@@ -47,7 +50,7 @@ class CustomDrawer extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (BuildContext context) => Career()));
+                      builder: (BuildContext context) => const Career()));
 
             },
           ),

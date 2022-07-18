@@ -7,7 +7,6 @@ import 'package:bluecascade/screens/blog_pages/events.dart';
 import 'package:bluecascade/screens/blog_pages/formal.dart';
 import 'package:bluecascade/widgets/appbar.dart';
 import 'package:bluecascade/widgets/drawer.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'blog_pages/behaviour.dart';
@@ -24,8 +23,8 @@ class _BlogState extends State<Blog> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppbar(),
-      drawer: CustomDrawer(),
+      appBar: const CustomAppbar(),
+      drawer: const CustomDrawer(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -36,8 +35,8 @@ class _BlogState extends State<Blog> {
             Container(
               width: MediaQuery.of(context).size.width * 0.95,
               height: MediaQuery.of(context).size.height * 0.08,
-              color: Color(0xfff2f2f2),
-              child: Center(
+              color: const Color(0xfff2f2f2),
+              child: const Center(
                 child: Text(
                   'BLOG',
                   style: TextStyle(
@@ -51,7 +50,7 @@ class _BlogState extends State<Blog> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.95,
               child: Column(
                 children: [
@@ -67,13 +66,13 @@ class _BlogState extends State<Blog> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('Posted on 05 Dec 2019 / '),
-                        Icon(Icons.comment),
+                        const Text('Posted on 05 Dec 2019 / '),
+                        const Icon(Icons.comment),
                         GestureDetector(
                             onTap: () {},
                             child: Text(" $comments" + "  Comments / ")),
-                        Icon(Icons.person_pin_outlined),
-                        GestureDetector(onTap: () {}, child: Text(' bluecas')),
+                        const Icon(Icons.person_pin_outlined),
+                        GestureDetector(onTap: () {}, child: const Text(' bluecas')),
                       ],
                     ),
                   ),
@@ -90,9 +89,9 @@ class _BlogState extends State<Blog> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (BuildContext context) => Annual_Dinner()));
+                                    builder: (BuildContext context) => const Annual_Dinner()));
                           },
-                          child: Text(
+                          child: const Text(
                             'Annual Dinner 2.0',
                             style: TextStyle(
                                 fontSize: 20, fontWeight: FontWeight.w300),
@@ -109,12 +108,12 @@ class _BlogState extends State<Blog> {
                   Row(
                     children: [
 
-                      Icon(Icons.category),
+                      const Icon(Icons.category),
                       GestureDetector(
                           onTap: (){
 
                           },
-                          child: Text("  "+"Uncategorized"))
+                          child: const Text("  "+"Uncategorized"))
                     ],
                   )
                 ],
@@ -124,7 +123,7 @@ class _BlogState extends State<Blog> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.95,
               child: Column(
                 children: [
@@ -136,19 +135,17 @@ class _BlogState extends State<Blog> {
                     color: Colors.transparent,
                     height: MediaQuery.of(context).size.height * 0.01,
                   ),
-                  Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text('Posted on 28 Feb 2019 / '),
-                        Icon(Icons.comment),
-                        GestureDetector(
-                            onTap: () {},
-                            child: Text(" $comments" + "  Comments / ")),
-                        Icon(Icons.person_pin_outlined),
-                        GestureDetector(onTap: () {}, child: Text(' bluecas')),
-                      ],
-                    ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text('Posted on 28 Feb 2019 / '),
+                      const Icon(Icons.comment),
+                      GestureDetector(
+                          onTap: () {},
+                          child: Text(" $comments" + "  Comments / ")),
+                      const Icon(Icons.person_pin_outlined),
+                      GestureDetector(onTap: () {}, child: const Text(' bluecas')),
+                    ],
                   ),
                   Divider(
                     color: Colors.transparent,
@@ -156,16 +153,16 @@ class _BlogState extends State<Blog> {
                   ),
                   Row(
                     children: [
-                      Container(
+                      SizedBox(
                         width: MediaQuery.of(context).size.width*0.95,
                         child: GestureDetector(
                           onTap: () {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (BuildContext context) => Amazone_model()));
+                                    builder: (BuildContext context) => const Amazone_model()));
                           },
-                          child: Text(
+                          child: const Text(
                             "WAYS TO HIT DEFINITE SUCCESS, SELLING VIA THE 3 BUSINESS MODELS OF AMAZON",
                             style: TextStyle(
                                 fontSize: 20, fontWeight: FontWeight.w300),
@@ -182,12 +179,12 @@ class _BlogState extends State<Blog> {
                   Row(
                     children: [
 
-                      Icon(Icons.category),
+                      const Icon(Icons.category),
                       GestureDetector(
                           onTap: (){
 
                           },
-                          child: Text("  "+" News"))
+                          child: const Text("  "+" News"))
                     ],
                   )
                 ],
@@ -209,19 +206,17 @@ class _BlogState extends State<Blog> {
                     color: Colors.transparent,
                     height: MediaQuery.of(context).size.height * 0.01,
                   ),
-                  Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text('Posted on 06 Feb 2019 / '),
-                        Icon(Icons.comment),
-                        GestureDetector(
-                            onTap: () {},
-                            child: Text(" $comments" + "  Comments / ")),
-                        Icon(Icons.person_pin_outlined),
-                        GestureDetector(onTap: () {}, child: Text(' bluecas')),
-                      ],
-                    ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text('Posted on 06 Feb 2019 / '),
+                      const Icon(Icons.comment),
+                      GestureDetector(
+                          onTap: () {},
+                          child: Text(" $comments" + "  Comments / ")),
+                      const Icon(Icons.person_pin_outlined),
+                      GestureDetector(onTap: () {}, child: const Text(' bluecas')),
+                    ],
                   ),
                   Divider(
                     color: Colors.transparent,
@@ -229,16 +224,16 @@ class _BlogState extends State<Blog> {
                   ),
                   Row(
                     children: [
-                      Container(
+                      SizedBox(
                         width: MediaQuery.of(context).size.width*0.95,
                         child: GestureDetector(
                           onTap: () {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (BuildContext context) => Behaviour()));
+                                    builder: (BuildContext context) => const Behaviour()));
                           },
-                          child: Text(
+                          child: const Text(
                             "Behavioural Growth Discourses/Sessions",
                             style: TextStyle(
                                 fontSize: 20, fontWeight: FontWeight.w300),
@@ -255,12 +250,12 @@ class _BlogState extends State<Blog> {
                   Row(
                     children: [
 
-                      Icon(Icons.category),
+                      const Icon(Icons.category),
                       GestureDetector(
                           onTap: (){
 
                           },
-                          child: Text("  "+" Company news"))
+                          child: const Text("  "+" Company news"))
                     ],
                   )
                 ],
@@ -270,7 +265,7 @@ class _BlogState extends State<Blog> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.95,
               child: Column(
                 children: [
@@ -282,19 +277,17 @@ class _BlogState extends State<Blog> {
                     color: Colors.transparent,
                     height: MediaQuery.of(context).size.height * 0.01,
                   ),
-                  Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text('Posted on 06 Feb 2019 / '),
-                        Icon(Icons.comment),
-                        GestureDetector(
-                            onTap: () {},
-                            child: Text(" $comments" + "  Comments / ")),
-                        Icon(Icons.person_pin_outlined),
-                        GestureDetector(onTap: () {}, child: Text(' bluecas')),
-                      ],
-                    ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text('Posted on 06 Feb 2019 / '),
+                      const Icon(Icons.comment),
+                      GestureDetector(
+                          onTap: () {},
+                          child: Text(" $comments" + "  Comments / ")),
+                      const Icon(Icons.person_pin_outlined),
+                      GestureDetector(onTap: () {}, child: const Text(' bluecas')),
+                    ],
                   ),
                   Divider(
                     color: Colors.transparent,
@@ -302,7 +295,7 @@ class _BlogState extends State<Blog> {
                   ),
                   Row(
                     children: [
-                      Container(
+                      SizedBox(
                         width: MediaQuery.of(context).size.width*0.95,
                         child: GestureDetector(
                           onTap: () {
@@ -311,7 +304,7 @@ class _BlogState extends State<Blog> {
                                 MaterialPageRoute(
                                     builder: (BuildContext context) => Annual_dinner_first()));
                           },
-                          child: Text(
+                          child: const Text(
                             "Annual Dinner",
                             style: TextStyle(
                                 fontSize: 20, fontWeight: FontWeight.w300),
@@ -328,12 +321,12 @@ class _BlogState extends State<Blog> {
                   Row(
                     children: [
 
-                      Icon(Icons.category),
+                      const Icon(Icons.category),
                       GestureDetector(
                           onTap: (){
 
                           },
-                          child: Text("  "+" Company news"))
+                          child: const Text("  "+" Company news"))
                     ],
                   )
                 ],
@@ -343,7 +336,7 @@ class _BlogState extends State<Blog> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.95,
               child: Column(
                 children: [
@@ -355,19 +348,17 @@ class _BlogState extends State<Blog> {
                     color: Colors.transparent,
                     height: MediaQuery.of(context).size.height * 0.01,
                   ),
-                  Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text('Posted on 06 Feb 2019 / '),
-                        Icon(Icons.comment),
-                        GestureDetector(
-                            onTap: () {},
-                            child: Text(" $comments" + "  Comments / ")),
-                        Icon(Icons.person_pin_outlined),
-                        GestureDetector(onTap: () {}, child: Text(' bluecas')),
-                      ],
-                    ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text('Posted on 06 Feb 2019 / '),
+                      const Icon(Icons.comment),
+                      GestureDetector(
+                          onTap: () {},
+                          child: Text(" $comments" + "  Comments / ")),
+                      Icon(Icons.person_pin_outlined),
+                      GestureDetector(onTap: () {}, child: const Text(' bluecas')),
+                    ],
                   ),
                   Divider(
                     color: Colors.transparent,
@@ -375,16 +366,16 @@ class _BlogState extends State<Blog> {
                   ),
                   Row(
                     children: [
-                      Container(
+                      SizedBox(
                         width: MediaQuery.of(context).size.width*0.95,
                         child: GestureDetector(
                           onTap: () {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (BuildContext context) => Events()));
+                                    builder: (BuildContext context) => const Events()));
                           },
-                          child: Text(
+                          child: const Text(
                             "Organizing Amiable Events",
                             style: TextStyle(
                                 fontSize: 20, fontWeight: FontWeight.w300),
@@ -401,12 +392,12 @@ class _BlogState extends State<Blog> {
                   Row(
                     children: [
 
-                      Icon(Icons.category),
+                      const Icon(Icons.category),
                       GestureDetector(
                           onTap: (){
 
                           },
-                          child: Text("  "+"Company news"))
+                          child: const Text("  "+"Company news"))
                     ],
                   )
                 ],
@@ -428,19 +419,17 @@ class _BlogState extends State<Blog> {
                     color: Colors.transparent,
                     height: MediaQuery.of(context).size.height * 0.01,
                   ),
-                  Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text('Posted on 06 Feb 2019 / '),
-                        Icon(Icons.comment),
-                        GestureDetector(
-                            onTap: () {},
-                            child: Text(" $comments" + "  Comments / ")),
-                        Icon(Icons.person_pin_outlined),
-                        GestureDetector(onTap: () {}, child: Text(' bluecas')),
-                      ],
-                    ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text('Posted on 06 Feb 2019 / '),
+                      Icon(Icons.comment),
+                      GestureDetector(
+                          onTap: () {},
+                          child: Text(" $comments" + "  Comments / ")),
+                      Icon(Icons.person_pin_outlined),
+                      GestureDetector(onTap: () {}, child: Text(' bluecas')),
+                    ],
                   ),
                   Divider(
                     color: Colors.transparent,
@@ -448,16 +437,16 @@ class _BlogState extends State<Blog> {
                   ),
                   Row(
                     children: [
-                      Container(
+                      SizedBox(
                         width: MediaQuery.of(context).size.width*0.95,
                         child: GestureDetector(
                           onTap: () {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (BuildContext context) => Formal()));
+                                    builder: (BuildContext context) => const Formal()));
                           },
-                          child: Text(
+                          child: const Text(
                             "Formal Gatherings",
                             style: TextStyle(
                                 fontSize: 20, fontWeight: FontWeight.w300),
@@ -474,12 +463,12 @@ class _BlogState extends State<Blog> {
                   Row(
                     children: [
 
-                      Icon(Icons.category),
+                      const Icon(Icons.category),
                       GestureDetector(
                           onTap: (){
 
                           },
-                          child: Text("  "+"Company news"))
+                          child: const Text("  "+"Company news"))
                     ],
                   )
                 ],

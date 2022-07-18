@@ -1,6 +1,5 @@
 
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../widgets/appbar.dart';
@@ -43,7 +42,7 @@ class _Annual_dinner_firstState extends State<Annual_dinner_first> {
               height: MediaQuery.of(context).size.height * 0.08,
               color: const Color(0xfff2f2f2),
               child: const Center(
-                child: const Text(
+                child: Text(
                   'ANNUAL DINNER',
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -57,7 +56,7 @@ class _Annual_dinner_firstState extends State<Annual_dinner_first> {
               height: MediaQuery.of(context).size.height * 0.01,
             ),
 
-            Container(
+            SizedBox(
                 width: MediaQuery.of(context).size.width * 0.98,
                 child: Image.asset(
                   "assets/annual/an1.jpg",
@@ -67,7 +66,7 @@ class _Annual_dinner_firstState extends State<Annual_dinner_first> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.01,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.98,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -88,7 +87,7 @@ class _Annual_dinner_firstState extends State<Annual_dinner_first> {
               height: MediaQuery.of(context).size.height * 0.02,
             ),
 
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.95,
               child: const Text(" BlueCascade, along with its greatly escalating exposure and ventures alike, bears a sturdy faith that as goes work load and drudgery, there must also be ample space for other recreational activities. BlueCascade provides the space and the time to bask and relax which is key given the stress the team is able to handle during the work hours and beyond. BlueCascade arranged an annual dinner which reflected the strong basis of the company which has now melted into being a fortified team. The dinner unlike any dinner for a corporate structure like the one BlueCascade has turned out to be, was majorly an array of simplistic amiable aura which majorly focused over the roots from which BlueCascade emerged out of. The founder of BlueCascade, Salman Altaf pondered over how the genesis version of the company had very few members of the team but gave their all for the company. The co-founder, Farhan Khalid and the chief executive officer BlueCascade, Umair Asghar Gurchani were celebrated owing to their services for the company and the strongest of wills which kept them supporting the founder as he explored and dominated every department and avenue he turned his course to. Each member of the team was drawn to light as they elaborated over their experience with the company so far and what they expect out of the"
                   " company that can wholly and legitimately reflect their services."),
@@ -98,7 +97,7 @@ class _Annual_dinner_firstState extends State<Annual_dinner_first> {
               height: MediaQuery.of(context).size.height * 0.02,
             ),
 
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.95,
               child: const Text("With promising dreams and passion, the team officially stepped foot over the corporate ladder, making and carving their own route towards success as this is what BlueCascade has been renowned for. The conclusion of the event was crucially focused over the pointing out the goals, vision that the founder had as BlueCascade was given form, "
                   "bit by bit and empowering the local man to stand out to the world."),
@@ -107,7 +106,7 @@ class _Annual_dinner_firstState extends State<Annual_dinner_first> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.95,
               child: const Text("LEAVE A COMMENT",style: TextStyle(
                 fontWeight: FontWeight.bold,
@@ -119,7 +118,7 @@ class _Annual_dinner_firstState extends State<Annual_dinner_first> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width*0.95,
               child: TextField(
                 controller: textarea,
@@ -130,13 +129,13 @@ class _Annual_dinner_firstState extends State<Annual_dinner_first> {
                   comment=val;
                 },
                 decoration: const InputDecoration(
-                  enabledBorder: const OutlineInputBorder(
+                  enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(width: 2, color: Colors.black54),
                   ),
 
                     labelText: "Enter Comment",
                     focusedBorder: OutlineInputBorder(
-                        borderSide: const BorderSide(width: 2, color: Colors.black54)
+                        borderSide: BorderSide(width: 2, color: Colors.black54)
                     )
                 ),
 
@@ -146,7 +145,7 @@ class _Annual_dinner_firstState extends State<Annual_dinner_first> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width*0.95,
               child: TextField(
                 controller: namecontroller,
@@ -156,13 +155,13 @@ class _Annual_dinner_firstState extends State<Annual_dinner_first> {
                   name=val;
                 },
                 decoration: const InputDecoration(
-                    enabledBorder: const OutlineInputBorder(
+                    enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(width: 2, color: Colors.black54),
                     ),
 
                     labelText: "Enter Name",
                     focusedBorder: OutlineInputBorder(
-                        borderSide: const BorderSide(width: 2, color: Colors.black54)
+                        borderSide: BorderSide(width: 2, color: Colors.black54)
                     )
                 ),
 
@@ -172,7 +171,7 @@ class _Annual_dinner_firstState extends State<Annual_dinner_first> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width*0.95,
               child: TextField(
                 controller: emailcontroller,
@@ -184,7 +183,7 @@ class _Annual_dinner_firstState extends State<Annual_dinner_first> {
                 },
                 decoration: const InputDecoration(
                     enabledBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(width: 2, color: Colors.black54),
+                      borderSide: BorderSide(width: 2, color: Colors.black54),
                     ),
 
                     labelText: "Enter Email",
@@ -199,7 +198,7 @@ class _Annual_dinner_firstState extends State<Annual_dinner_first> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width*0.95,
               child: TextField(
                 controller: websitecontroller,
@@ -225,26 +224,24 @@ class _Annual_dinner_firstState extends State<Annual_dinner_first> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.05,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width*0.95,
               child: Column(
                 children: [
                   FlatButton(onPressed: (){
-                    print("object");
                     if(email==""||email==null&&name==""||name==null){
-                      print("after if");
                       showDialog(
                         context: context,
                         builder: (BuildContext){
                           return AlertDialog(
-                            title: Text("ERROR: ",style: TextStyle(
+                            title: const Text("ERROR: ",style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 15,
                             ),),
-                            content: Text("Please fill the required fields (name, email)."),
+                            content: const Text("Please fill the required fields (name, email)."),
                             actions: [
                               FlatButton(
-                                child: new Text("Close"),
+                                child: const Text("Close"),
                                 onPressed: () {
                                   Navigator.of(context).pop();
                                 },
@@ -254,7 +251,6 @@ class _Annual_dinner_firstState extends State<Annual_dinner_first> {
                           );
                         }
                       );
-                      print("after dia");
 
                     }
                   },
@@ -281,7 +277,7 @@ class _Annual_dinner_firstState extends State<Annual_dinner_first> {
               color: Colors.grey,
             ),
             color: Colors.grey,
-            borderRadius: const BorderRadius.all(const Radius.circular(30))
+            borderRadius: const BorderRadius.all(Radius.circular(30))
         ),
 
         child: IconButton(

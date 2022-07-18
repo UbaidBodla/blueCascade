@@ -41,7 +41,7 @@ class _BehaviourState extends State<Behaviour> {
               height: MediaQuery.of(context).size.height * 0.08,
               color: const Color(0xfff2f2f2),
               child: const Center(
-                child: const Text(
+                child: Text(
                   'BEHAVIOURAL GROWTH DISCOURSES/SESSIONS',
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -55,7 +55,7 @@ class _BehaviourState extends State<Behaviour> {
               height: MediaQuery.of(context).size.height * 0.01,
             ),
 
-            Container(
+            SizedBox(
                 width: MediaQuery.of(context).size.width * 0.98,
                 child: Image.asset(
                   "assets/blogp/b3.jpg",
@@ -65,7 +65,7 @@ class _BehaviourState extends State<Behaviour> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.01,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.98,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -86,7 +86,7 @@ class _BehaviourState extends State<Behaviour> {
               height: MediaQuery.of(context).size.height * 0.02,
             ),
 
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.95,
               child: const Text(" ‘Breaking the illusions’ is never the easy part and BlueCascade has grasped the fact already accepting that they need to be the breaker of the chains that have kept the stereotypes intact for a prolonged period of time. Spreading out of these stereotypes is what the true spirit of the Cascadians, sky high as they always manage to stand upright after the dust settles. Sticking to the vision originally brought to existence, by the chief executive Officer, Umair Asghar Gurchani, Cascadians vow to bring the power not only to their person and the team but to each and every man that "
                   "they interact with bringing out of the shadows of individual constraints."),
@@ -96,7 +96,7 @@ class _BehaviourState extends State<Behaviour> {
               height: MediaQuery.of(context).size.height * 0.02,
             ),
 
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.95,
               child: const Text(" BlueCascade seeks to preach this vision and adopt measure to, at least empower the entire team associated with BlueCascade. Each individual can in turn, act as the preacher him/herself encouraging a local man to jump out of the illusion paradox. The careful measures can bring the due knowledge to specific and can act as the straw whenever he/she goes down drowning. BlueCascade regularly arranges sessions and meetups, setting aside the usual business and corporate debates and talks, focusing over the personal growth which can shape up individuality.  The sessions allow each member of the team the liberty to speak his/her heart out brining light to minor yet decisive topics that must be catered for on expedited basis. The sessions usually focus over a major topic as the member sit in an intellectual circle presenting their side of the story and offer opinions. The sessions terminate as each"
                   " member decides to improve health parameters and scaling his/her personal development."),
@@ -105,7 +105,7 @@ class _BehaviourState extends State<Behaviour> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.95,
               child: const Text("LEAVE A COMMENT",style: TextStyle(
                 fontWeight: FontWeight.bold,
@@ -117,7 +117,7 @@ class _BehaviourState extends State<Behaviour> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width*0.95,
               child: TextField(
                 controller: textarea,
@@ -128,13 +128,13 @@ class _BehaviourState extends State<Behaviour> {
                   comment=val;
                 },
                 decoration: const InputDecoration(
-                    enabledBorder: const OutlineInputBorder(
+                    enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(width: 2, color: Colors.black54),
                     ),
 
                     labelText: "Enter Comment",
                     focusedBorder: OutlineInputBorder(
-                        borderSide: const BorderSide(width: 2, color: Colors.black54)
+                        borderSide: BorderSide(width: 2, color: Colors.black54)
                     )
                 ),
 
@@ -144,7 +144,7 @@ class _BehaviourState extends State<Behaviour> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width*0.95,
               child: TextField(
                 controller: namecontroller,
@@ -154,13 +154,13 @@ class _BehaviourState extends State<Behaviour> {
                   name=val;
                 },
                 decoration: const InputDecoration(
-                    enabledBorder: const OutlineInputBorder(
+                    enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(width: 2, color: Colors.black54),
                     ),
 
                     labelText: "Enter Name",
                     focusedBorder: OutlineInputBorder(
-                        borderSide: const BorderSide(width: 2, color: Colors.black54)
+                        borderSide: BorderSide(width: 2, color: Colors.black54)
                     )
                 ),
 
@@ -170,7 +170,7 @@ class _BehaviourState extends State<Behaviour> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width*0.95,
               child: TextField(
                 controller: emailcontroller,
@@ -182,7 +182,7 @@ class _BehaviourState extends State<Behaviour> {
                 },
                 decoration: const InputDecoration(
                     enabledBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(width: 2, color: Colors.black54),
+                      borderSide: BorderSide(width: 2, color: Colors.black54),
                     ),
 
                     labelText: "Enter Email",
@@ -197,7 +197,7 @@ class _BehaviourState extends State<Behaviour> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width*0.95,
               child: TextField(
                 controller: websitecontroller,
@@ -228,21 +228,21 @@ class _BehaviourState extends State<Behaviour> {
               child: Column(
                 children: [
                   FlatButton(onPressed: (){
-                    print("object");
+
                     if(email==""||email==null&&name==""||name==null){
-                      print("after if");
+
                       showDialog(
                           context: context,
                           builder: (BuildContext){
                             return AlertDialog(
-                              title: Text("ERROR: ",style: TextStyle(
+                              title: const Text("ERROR: ",style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 15,
                               ),),
-                              content: Text("Please fill the required fields (name, email)."),
+                              content: const Text("Please fill the required fields (name, email)."),
                               actions: [
                                 FlatButton(
-                                  child: new Text("Close"),
+                                  child: const Text("Close"),
                                   onPressed: () {
                                     Navigator.of(context).pop();
                                   },
@@ -252,7 +252,7 @@ class _BehaviourState extends State<Behaviour> {
                             );
                           }
                       );
-                      print("after dia");
+
 
                     }
                   },
@@ -279,7 +279,7 @@ class _BehaviourState extends State<Behaviour> {
               color: Colors.grey,
             ),
             color: Colors.grey,
-            borderRadius: const BorderRadius.all(const Radius.circular(30))
+            borderRadius: const BorderRadius.all(Radius.circular(30))
         ),
 
         child: IconButton(

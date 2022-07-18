@@ -1,7 +1,6 @@
 
 import 'dart:math';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CardShow extends StatelessWidget {
@@ -15,9 +14,9 @@ class CardShow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Container(
+      child: SizedBox(
         width: MediaQuery.of(context).size.width * 0.70,
-        height: MediaQuery.of(context).size.height*0.27,
+        height: MediaQuery.of(context).size.height*0.30,
         child: Card(
           child:Column(
             children: [
@@ -26,12 +25,12 @@ class CardShow extends StatelessWidget {
                   radius: 70,
                   child: ClipRRect(
                     borderRadius:BorderRadius.circular(70),
-                    child: Image.asset('$img'),
+                    child: Image.asset(img),
                   )
               ),
               Center(
-                child: Text("$name",style:
-                TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
+                child: Text(name,style:
+                const TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
               ),
               Container(
                 width: 150,
@@ -40,7 +39,7 @@ class CardShow extends StatelessWidget {
               ),
 
               Center(
-                child: Text("$type",style: TextStyle(
+                child: Text(type,style: const TextStyle(
                   fontWeight: FontWeight.w200,
                   fontSize: 20
                 ),),
@@ -62,10 +61,10 @@ class Picture extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.width * 0.80,
       height: MediaQuery.of(context).size.height*0.30,
-      child: Card(child: Image.asset("$picture",fit: BoxFit.fill,)
+      child: Card(child: Image.asset(picture,fit: BoxFit.fill,)
 
       ),
       
@@ -80,10 +79,10 @@ class Patners extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.width * 0.32,
       height: MediaQuery.of(context).size.height*0.15,
-      child: Card(child: Image.asset("$pic" ),
+      child: Card(child: Image.asset(pic),
 
     ));
   }

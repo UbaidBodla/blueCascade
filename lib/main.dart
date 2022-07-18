@@ -1,8 +1,6 @@
 import 'package:bluecascade/screens/Home.dart';
 import 'package:bluecascade/screens/blog_main.dart';
 import 'package:bluecascade/screens/founder.dart';
-import 'package:bluecascade/widgets/appbar.dart';
-import 'package:bluecascade/widgets/drawer.dart';
 import 'package:bluecascade/widgets/tab_wigets.dart';
 import 'package:flutter/material.dart';
 import 'package:bluecascade/screens/about_us.dart';
@@ -49,10 +47,10 @@ class _MyHomePageState extends State<MyHomePage>with TickerProviderStateMixin  {
 
     return Scaffold(
 
-      body: TabBarView(controller: tabController, children: [
-        const Home(),
+      body: TabBarView(controller: tabController, children: const [
+        Home(),
 
-        const Founder(),
+        Founder(),
         About_US(),
         Blog(),
       ]),

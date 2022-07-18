@@ -1,7 +1,6 @@
 
 
 import 'package:bluecascade/widgets/drawer.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../widgets/appbar.dart';
@@ -18,7 +17,7 @@ class _Annual_DinnerState extends State<Annual_Dinner> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppbar(),
+      appBar: const CustomAppbar(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -29,8 +28,8 @@ class _Annual_DinnerState extends State<Annual_Dinner> {
             Container(
               width: MediaQuery.of(context).size.width * 0.95,
               height: MediaQuery.of(context).size.height * 0.08,
-              color: Color(0xfff2f2f2),
-              child: Center(
+              color: const Color(0xfff2f2f2),
+              child: const Center(
                 child: Text(
                   'ANNUAL DINNER 2.0',
                   style: TextStyle(
@@ -45,7 +44,7 @@ class _Annual_DinnerState extends State<Annual_Dinner> {
               height: MediaQuery.of(context).size.height * 0.01,
             ),
 
-            Container(
+            SizedBox(
                 width: MediaQuery.of(context).size.width * 0.98,
                 child: Image.asset(
                   "assets/annual/an1.jpg",
@@ -55,18 +54,18 @@ class _Annual_DinnerState extends State<Annual_Dinner> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.01,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.98,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Posted on 06 Feb 2019 / '),
-                  Icon(Icons.comment),
+                  const Text('Posted on 06 Feb 2019 / '),
+                  const Icon(Icons.comment),
                   GestureDetector(
                       onTap: () {},
                       child: Text(" $comments" + "  Comments / ")),
-                  Icon(Icons.person_pin_outlined),
-                  GestureDetector(onTap: () {}, child: Text(' bluecas')),
+                  const Icon(Icons.person_pin_outlined),
+                  GestureDetector(onTap: () {}, child: const Text(' bluecas')),
                 ],
               ),
             ),
@@ -74,9 +73,9 @@ class _Annual_DinnerState extends State<Annual_Dinner> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.95,
-              child: Text(" Annual Dinner 2.0",style: TextStyle(
+              child: const Text(" Annual Dinner 2.0",style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 15
               ),),
@@ -86,9 +85,9 @@ class _Annual_DinnerState extends State<Annual_Dinner> {
               height: MediaQuery.of(context).size.height * 0.02,
             ),
 
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.95,
-              child: Text("Franklin D. Roosevelt rightly said, “A smooth sea never made a skilled sailor.” Though we got onto experience the same, not even opting it for ourselves. The happy faces on this page better describe it was yet again win-win situation for the Cascadians, but it all came embedded with a catch-22. "
+              child: const Text("Franklin D. Roosevelt rightly said, “A smooth sea never made a skilled sailor.” Though we got onto experience the same, not even opting it for ourselves. The happy faces on this page better describe it was yet again win-win situation for the Cascadians, but it all came embedded with a catch-22. "
                   "Asking each of us to knock down the tough times with resilience and putting in the better versions of ourselves on the show."),
             ),
             Divider(
@@ -96,18 +95,18 @@ class _Annual_DinnerState extends State<Annual_Dinner> {
               height: MediaQuery.of(context).size.height * 0.02,
             ),
 
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.95,
-              child: Text("The abstract idea of 2.0 was on the quest for us at Cascade and we got onto hunt it through this year to stand on the victorious side. Triumphs already on the side and the art of changing the movement of the tides, "
+              child: const Text("The abstract idea of 2.0 was on the quest for us at Cascade and we got onto hunt it through this year to stand on the victorious side. Triumphs already on the side and the art of changing the movement of the tides, "
                   "this outing was about getting steadier, calmer and focused."),
             ),
             Divider(
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.95,
-              child: Text("This event marked 2nd anniversary of Blue Cascade, "
+              child: const Text("This event marked 2nd anniversary of Blue Cascade, "
                   "which was actually birth of an idea and the pledge to ‘break the illusions’."),
             ),
             Divider(
@@ -115,16 +114,16 @@ class _Annual_DinnerState extends State<Annual_Dinner> {
               height: MediaQuery.of(context).size.height * 0.02,
             ),
 
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.95,
-              child: Text("The prodigies joining Blue Cascade had a great run this year and this was the time of the year when they should be cherished and appreciated for their blood, sweat and tears for Blue Cascade. Taking the road not meant to be taken by many doesn’t make it formidable, "
+              child: const Text("The prodigies joining Blue Cascade had a great run this year and this was the time of the year when they should be cherished and appreciated for their blood, sweat and tears for Blue Cascade. Taking the road not meant to be taken by many doesn’t make it formidable, "
                   "it just takes you one step closer to where you belong, success."),
             ),
             Divider(
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            Container(
+            SizedBox(
                 width: MediaQuery.of(context).size.width * 0.98,
                 child: Image.asset(
                   "assets/annual/an2.JPG",
@@ -134,9 +133,9 @@ class _Annual_DinnerState extends State<Annual_Dinner> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.03,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.95,
-              child: Text(" Some Highlights from Blue Cascade Annual Dinner 2.0",style: TextStyle(
+              child: const Text(" Some Highlights from Blue Cascade Annual Dinner 2.0",style: TextStyle(
                   fontWeight: FontWeight.w400,
                   fontSize: 15
               ),),
@@ -145,25 +144,25 @@ class _Annual_DinnerState extends State<Annual_Dinner> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.03,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.95,
-              child: Text("Carrying on with the custom, parents and families were specially invited as they stand as an integral part of Blue Cascade Family. "
+              child: const Text("Carrying on with the custom, parents and families were specially invited as they stand as an integral part of Blue Cascade Family. "
                   "The former Cascadians were also invited at this glitzy event that had some rocking performances from the doers in the team. "),
             ),
             Divider(
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.03,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.95,
-              child: Text("Just to get you familiar with how things go at Blue Cascade, "
+              child: const Text("Just to get you familiar with how things go at Blue Cascade, "
                   "we have established three teams/houses on the basis of hierarchy.  Here is how it goes:"),
             ),
             Divider(
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.95,
               child: RichText(
                 text: const TextSpan(children: [
@@ -195,7 +194,7 @@ class _Annual_DinnerState extends State<Annual_Dinner> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.03,
             ),
-            Container(
+            SizedBox(
                 width: MediaQuery.of(context).size.width * 0.98,
                 child: Image.asset(
                   "assets/annual/an3.jpg",
@@ -205,7 +204,7 @@ class _Annual_DinnerState extends State<Annual_Dinner> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.03,
             ),
-            Container(
+            SizedBox(
                 width: MediaQuery.of(context).size.width * 0.98,
                 child: Image.asset(
                   "assets/annual/an4.jpg",
@@ -215,7 +214,7 @@ class _Annual_DinnerState extends State<Annual_Dinner> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.03,
             ),
-            Container(
+            SizedBox(
                 width: MediaQuery.of(context).size.width * 0.98,
                 child: Image.asset(
                   "assets/annual/an5.jpg",
@@ -225,18 +224,18 @@ class _Annual_DinnerState extends State<Annual_Dinner> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.03,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.95,
-              child: Text("  Each of the team made it to the stage with their signature moves and anthems, which absolutely got the crowd on their feet. In order to keep on with the elegance and decency, we had some superb speakers on the eve as well. Just to settle out your curiosity, amid the list of speakers we had our beloved Founder Salman Altaf and Co-founder "
+              child: const Text("  Each of the team made it to the stage with their signature moves and anthems, which absolutely got the crowd on their feet. In order to keep on with the elegance and decency, we had some superb speakers on the eve as well. Just to settle out your curiosity, amid the list of speakers we had our beloved Founder Salman Altaf and Co-founder "
                   "Farhan Khalid enlightening the attendees. "),
             ),
             Divider(
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.03,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.95,
-              child: Text("  At the same time, the humors character sketches made attendees burst out laughing and what doubled the fun was a comical ‘News Headlines’ brought up by the Smurfs.  The most awaited sight was the prize distribution as it was time to laud the standout performers of the year 2018-19. What followed next was a "
+              child: const Text("  At the same time, the humors character sketches made attendees burst out laughing and what doubled the fun was a comical ‘News Headlines’ brought up by the Smurfs.  The most awaited sight was the prize distribution as it was time to laud the standout performers of the year 2018-19. What followed next was a "
                   "scrumptious dinner with a variety of cuisines and salads to tantalize the taste buds of attendees. "),
             ),
             Divider(
@@ -247,21 +246,21 @@ class _Annual_DinnerState extends State<Annual_Dinner> {
           ],
         ),
       ),
-      drawer: CustomDrawer(),
+      drawer: const CustomDrawer(),
       floatingActionButton: Container(
         decoration: BoxDecoration(
             border: Border.all(
               color: Colors.grey,
             ),
             color: Colors.grey,
-            borderRadius: BorderRadius.all(Radius.circular(30))
+            borderRadius: const BorderRadius.all(Radius.circular(30))
         ),
 
         child: IconButton(
           color: Colors.black,
             onPressed: () {
               Navigator.pop(context);
-            },icon: Icon(Icons.arrow_back,size: 35,)),
+            },icon: const Icon(Icons.arrow_back,size: 35,)),
       ),
     );
   }

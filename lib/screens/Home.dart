@@ -1,6 +1,5 @@
 import 'package:bluecascade/screens/blog_pages/annual_dinner.dart';
 import 'package:bluecascade/widgets/appbar.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/cards.dart';
@@ -20,15 +19,23 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppbar(),
-      drawer: CustomDrawer(),
+      appBar: const CustomAppbar(),
+      drawer: const CustomDrawer(),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Image.asset('assets/images/Logo.png',
-                width: MediaQuery.of(context).size.width * 0.50,
-                height: MediaQuery.of(context).size.height * 0.12,
-                fit: BoxFit.fill),
+            GestureDetector(
+              onTap: (){
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => const Home()));
+              },
+              child: Image.asset('assets/images/Logo.png',
+                  width: MediaQuery.of(context).size.width * 0.50,
+                  height: MediaQuery.of(context).size.height * 0.12,
+                  fit: BoxFit.fill),
+            ),
             Image.asset('assets/images/pic.png',
                 width: MediaQuery.of(context).size.width * 0.97,
                 height: MediaQuery.of(context).size.height * 0.25,
@@ -39,7 +46,7 @@ class _HomeState extends State<Home> {
                   color: Colors.transparent,
                   height: MediaQuery.of(context).size.height * 0.03,
                 ),
-                Text(
+                const Text(
                   "What Makes Us Stand Out",
                   style: TextStyle(
                     fontSize: 12,
@@ -50,7 +57,7 @@ class _HomeState extends State<Home> {
                   color: Colors.transparent,
                   height: MediaQuery.of(context).size.height * 0.02,
                 ),
-                Text(
+                const Text(
                   "What We Do?",
                   style: TextStyle(
                     fontSize: 28,
@@ -61,14 +68,14 @@ class _HomeState extends State<Home> {
                   color: Colors.transparent,
                   height: MediaQuery.of(context).size.height * 0.02,
                 ),
-                Container(
+                SizedBox(
                   width: MediaQuery.of(context).size.width*0.95,
-                  child: Text("Blue Cascade is an emerging e-commerce venture, striving to score a well deserved spot among the e-commerce juggernauts of the time. "
+                  child: const Text("Blue Cascade is an emerging e-commerce venture, striving to score a well deserved spot among the e-commerce juggernauts of the time. "
                       "Piled up from scratch to the giant that it has turned out to be, Blue Cascade has simply not witnessed a diligence deprived team pacing up the magnificent feat of conquering the milestones, the team orchestrated.\n"),
                 ),
-                Container(
+                SizedBox(
                   width: MediaQuery.of(context).size.width*0.95,
-                  child: Text("Blue Cascade strives to bring in the most viable products in the market, providing the best customer service on the go. Blue Cascade persisted among the pool of the already existent bigger fish as per the exquisite service quality that ushered Blue Cascade into the big leagues. Blue Cascade was founded by Salman Altaf, a very young emerging entrepreneur of the time and very few could match the age and skill combination. Along with the likes of Farhan Khalid (CO-Founder), Umair Asghar (CEO) and Muhammad Talal (Chief Technology Officer), Blue Cascade has sights set to explore other ventures and avenues besides sticking to the shtick that customers come first."),
+                  child: const Text("Blue Cascade strives to bring in the most viable products in the market, providing the best customer service on the go. Blue Cascade persisted among the pool of the already existent bigger fish as per the exquisite service quality that ushered Blue Cascade into the big leagues. Blue Cascade was founded by Salman Altaf, a very young emerging entrepreneur of the time and very few could match the age and skill combination. Along with the likes of Farhan Khalid (CO-Founder), Umair Asghar (CEO) and Muhammad Talal (Chief Technology Officer), Blue Cascade has sights set to explore other ventures and avenues besides sticking to the shtick that customers come first."),
                 ),
                 Divider(
                   color: Colors.transparent,
@@ -79,7 +86,7 @@ class _HomeState extends State<Home> {
                   children: [
                     Column(
                       children: [
-                        Container(
+                        SizedBox(
                           width: MediaQuery.of(context).size.width * 0.50,
                           height: MediaQuery.of(context).size.height * 0.50,
                           child: Center(
@@ -133,16 +140,16 @@ class _HomeState extends State<Home> {
                         color: Colors.transparent,
                         height: MediaQuery.of(context).size.height * 0.02,
                       ),
-                      Text('Meet Our Team',
+                      const Text('Meet Our Team',
                           style: TextStyle(
                               fontSize: 25, fontWeight: FontWeight.bold)),
                       Divider(
                         color: Colors.transparent,
                         height: MediaQuery.of(context).size.height * 0.02,
                       ),
-                      Container(
+                      SizedBox(
                         width: MediaQuery.of(context).size.width*0.95,
-                        child:Text("We’re a company of pioneers. It’s our job to make bold bets, and we get our energy from inventing on behalf of customers. Success is measured against the possible, not the probable. "
+                        child:const Text("We’re a company of pioneers. It’s our job to make bold bets, and we get our energy from inventing on behalf of customers. Success is measured against the possible, not the probable. "
                             "For today’s pioneers, Blue Cascade provides an excellent platform to grow exponentially."
                       )),
                       Divider(
@@ -154,7 +161,7 @@ class _HomeState extends State<Home> {
                   Column(
                     children: [
                       Column(
-                        children: [
+                        children: const [
                           CardShow(
                               img: 'assets/images/Salman.jpg',
                               name: "Slaman Altaf",
@@ -164,7 +171,7 @@ class _HomeState extends State<Home> {
                         ],
                       ),
                       Column(
-                        children: [
+                        children: const [
                           CardShow(
                               img: 'assets/images/Us.jpg',
                               name: "Usman Altaf",
@@ -174,7 +181,7 @@ class _HomeState extends State<Home> {
                         ],
                       ),
                       Column(
-                        children: [
+                        children: const [
                           CardShow(
                               img: 'assets/images/far.jpg',
                               name: "Farhan Khalid",
@@ -184,7 +191,7 @@ class _HomeState extends State<Home> {
                         ],
                       ),
                       Column(
-                        children: [
+                        children: const [
                           CardShow(
                               img: 'assets/images/Um.jpg',
                               name: "Umair Gurchani",
@@ -194,7 +201,7 @@ class _HomeState extends State<Home> {
                         ],
                       ),
                       Column(
-                        children: [
+                        children: const [
                           CardShow(
                               img: 'assets/images/sh.jpg',
                               name: "Mohammad Shazil",
@@ -204,7 +211,7 @@ class _HomeState extends State<Home> {
                         ],
                       ),
                       Column(
-                        children: [
+                        children: const [
                           CardShow(
                               img: 'assets/images/ak.jpg',
                               name: "Akhtar Rasool",
@@ -215,7 +222,7 @@ class _HomeState extends State<Home> {
                         ],
                       ),
                       Column(
-                        children: [
+                        children: const [
                           CardShow(
                               img: 'assets/images/as.jpg',
                               name: "Ashir",
@@ -225,7 +232,7 @@ class _HomeState extends State<Home> {
                         ],
                       ),
                       Column(
-                        children: [
+                        children: const [
                           CardShow(
                               img: 'assets/images/kh.jpg',
                               name: "Khizer",
@@ -236,7 +243,7 @@ class _HomeState extends State<Home> {
                         ],
                       ),
                       Column(
-                        children: [
+                        children: const [
                           CardShow(
                               img: 'assets/images/na.jpg',
                               name: "Nafs",
@@ -246,7 +253,7 @@ class _HomeState extends State<Home> {
                         ],
                       ),
                       Column(
-                        children: [
+                        children: const [
                           CardShow(
                               img: 'assets/images/ra.jpg',
                               name: "Rameen",
@@ -257,7 +264,7 @@ class _HomeState extends State<Home> {
                         ],
                       ),
                       Column(
-                        children: [
+                        children: const [
                           CardShow(
                               img: 'assets/images/af.jpg',
                               name: "Afshan",
@@ -269,7 +276,7 @@ class _HomeState extends State<Home> {
                         ],
                       ),
                       Column(
-                        children: [
+                        children: const [
                           CardShow(
                               img: 'assets/images/al.jpg',
                               name: "Ali Asghar",
@@ -293,8 +300,8 @@ class _HomeState extends State<Home> {
                   color: Colors.transparent,
                   height: MediaQuery.of(context).size.height * 0.04,
                 ),
-                Center(child: Text("THE BEST PICKS")),
-                Center(
+                const Center(child: Text("THE BEST PICKS")),
+                const Center(
                   child: Text('Media',
                       style: TextStyle(
                           fontSize: 25,
@@ -307,42 +314,14 @@ class _HomeState extends State<Home> {
                   height: MediaQuery.of(context).size.height * 0.04,
                 ),
                 Column(
-                  children: [
+                  children: const [
                     Picture(picture: "assets/Media/img1.png"),
-                  ],
-                ),
-                Column(
-                  children: [
                     Picture(picture: "assets/Media/img2.jpg"),
-                  ],
-                ),
-                Column(
-                  children: [
                     Picture(picture: "assets/Media/img3.png"),
-                  ],
-                ),
-                Column(
-                  children: [
                     Picture(picture: "assets/Media/img4.jpg"),
-                  ],
-                ),
-                Column(
-                  children: [
                     Picture(picture: "assets/Media/img5.png"),
-                  ],
-                ),
-                Column(
-                  children: [
                     Picture(picture: "assets/Media/img6.jpg"),
-                  ],
-                ),
-                Column(
-                  children: [
                     Picture(picture: "assets/Media/img7.jpg"),
-                  ],
-                ),
-                Column(
-                  children: [
                     Picture(picture: "assets/Media/img8.jpg"),
                   ],
                 ),
@@ -392,12 +371,12 @@ class _HomeState extends State<Home> {
                   color: Colors.transparent,
                   height: MediaQuery.of(context).size.height * 0.03,
                 ),
-                Center(
+                const Center(
                     child: Text(
                   "OUR NEWS & STORIES",
                   style: TextStyle(fontSize: 20, letterSpacing: 0.4),
                 )),
-                Text(
+                const Text(
                   'From The Blog',
                   style: TextStyle(
                       fontSize: 30,
@@ -423,13 +402,13 @@ class _HomeState extends State<Home> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text('Posted on 05 Dec 2019 /\n '),
-                          Icon(Icons.comment),
+                          const Text('Posted on 05 Dec 2019 /\n '),
+                          const Icon(Icons.comment),
                           GestureDetector(
                               onTap: () {},
                               child: Text(" $comments" + "Comments / ")),
-                          Icon(Icons.person_pin_outlined),
-                          GestureDetector(onTap: () {}, child: Text('bluecas')),
+                          const Icon(Icons.person_pin_outlined),
+                          GestureDetector(onTap: () {}, child: const Text('bluecas')),
                         ],
                       ),
                     ),
@@ -443,7 +422,7 @@ class _HomeState extends State<Home> {
                           padding: const EdgeInsets.fromLTRB(15, 0, 0, 0),
                           child: GestureDetector(
                             onTap: () {},
-                            child: Text(
+                            child: const Text(
                               'Annual Dinner 2.0',
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.w300),
@@ -452,15 +431,13 @@ class _HomeState extends State<Home> {
                         ),
                       ],
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(12.0),
-                      child: Container(
-                        child: Text(
-                            'Annual Dinner 2.0 Franklin D. Roosevelt rightly said  '
-                            '\n'
-                            ''
-                            '“A smooth sea never made a skilled sailor.” Though we got onto experience...'),
-                      ),
+                    const Padding(
+                      padding: EdgeInsets.all(12.0),
+                      child: Text(
+                          'Annual Dinner 2.0 Franklin D. Roosevelt rightly said  '
+                          '\n'
+                          ''
+                          '“A smooth sea never made a skilled sailor.” Though we got onto experience...'),
                     ),
                     GestureDetector(
                       onTap: () {},
@@ -471,16 +448,16 @@ class _HomeState extends State<Home> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (BuildContext context) => Annual_Dinner(),
+                                  builder: (BuildContext context) => const Annual_Dinner(),
                                 ),
                               );
                             },
-                            child: Text("CONTINUE READING"),
-                            focusColor: Color(0xff00a0b4),
-                            highlightColor: Color(0xff00a0b4),
-                            hoverColor: Color(0xff00a0b4),
+                            focusColor: const Color(0xff00a0b4),
+                            highlightColor: const Color(0xff00a0b4),
+                            hoverColor: const Color(0xff00a0b4),
+                            child: const Text("CONTINUE READING"),
                           ),
-                          Icon(Icons.navigate_next),
+                          const Icon(Icons.navigate_next),
                         ],
                       ),
                     )
@@ -496,19 +473,17 @@ class _HomeState extends State<Home> {
                       color: Colors.transparent,
                       height: MediaQuery.of(context).size.height * 0.01,
                     ),
-                    Container(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text('Posted on 28 Feb 2019 / \n'),
-                          Icon(Icons.comment),
-                          GestureDetector(
-                              onTap: () {},
-                              child: Text(" $comments" + "  Comments / ")),
-                          Icon(Icons.person_pin_outlined),
-                          GestureDetector(onTap: () {}, child: Text(' bluecas')),
-                        ],
-                      ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text('Posted on 28 Feb 2019 / \n'),
+                        const Icon(Icons.comment),
+                        GestureDetector(
+                            onTap: () {},
+                            child: Text(" $comments" + "  Comments / ")),
+                        const Icon(Icons.person_pin_outlined),
+                        GestureDetector(onTap: () {}, child: const Text(' bluecas')),
+                      ],
                     ),
                     Divider(
                       color: Colors.transparent,
@@ -520,9 +495,9 @@ class _HomeState extends State<Home> {
                           padding: const EdgeInsets.fromLTRB(15, 0, 0, 0),
                           child: GestureDetector(
                             onTap: () {},
-                            child: Container(
+                            child: SizedBox(
                               width: MediaQuery.of(context).size.width*0.95,
-                              child: Text(
+                              child: const Text(
                                 'Ways to Hit Definite Success, Selling Via The 3 Business Models Of Amazon',
                                 style: TextStyle(
                                     fontSize: 20, fontWeight: FontWeight.w300),
@@ -532,11 +507,9 @@ class _HomeState extends State<Home> {
                         ),
                       ],
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(12.0),
-                      child: Container(
-                        child: Text('I have run into people asking me frequently about how to perfectly conduct business over Amazon keeping to good revenue. I...'),
-                      ),
+                    const Padding(
+                      padding: EdgeInsets.all(12.0),
+                      child: Text('I have run into people asking me frequently about how to perfectly conduct business over Amazon keeping to good revenue. I...'),
                     ),
                     GestureDetector(
                       onTap: () {},
@@ -547,16 +520,16 @@ class _HomeState extends State<Home> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (BuildContext context) => Amazone_model(),
+                                  builder: (BuildContext context) => const Amazone_model(),
                                 ),
                               );
                             },
-                            child: Text("CONTINUE READING"),
-                            focusColor: Color(0xff00a0b4),
-                            highlightColor: Color(0xff00a0b4),
-                            hoverColor: Color(0xff00a0b4),
+                            focusColor: const Color(0xff00a0b4),
+                            highlightColor: const Color(0xff00a0b4),
+                            hoverColor: const Color(0xff00a0b4),
+                            child: const Text("CONTINUE READING"),
                           ),
-                          Icon(Icons.navigate_next),
+                          const Icon(Icons.navigate_next),
                         ],
                       ),
                     )
@@ -572,18 +545,18 @@ class _HomeState extends State<Home> {
                       color: Colors.transparent,
                       height: MediaQuery.of(context).size.height * 0.01,
                     ),
-                    Container(
+                    SizedBox(
                       width: MediaQuery.of(context).size.width * 0.99,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text('Posted on 06 Feb 2019/\n'),
-                          Icon(Icons.comment),
+                          const Text('Posted on 06 Feb 2019/\n'),
+                          const Icon(Icons.comment),
                           GestureDetector(
                               onTap: () {},
                               child: Text("$comments" + "Comments/")),
-                          Icon(Icons.person_pin_outlined),
-                          GestureDetector(onTap: () {}, child: Text('bluecas')),
+                          const Icon(Icons.person_pin_outlined),
+                          GestureDetector(onTap: () {}, child: const Text('bluecas')),
                         ],
                       ),
                     ),
@@ -597,7 +570,7 @@ class _HomeState extends State<Home> {
                           padding: const EdgeInsets.fromLTRB(15, 0, 0, 0),
                           child: GestureDetector(
                             onTap: () {},
-                            child: Text(
+                            child: const Text(
                               'Annual Dinner',
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.w300),
@@ -606,12 +579,10 @@ class _HomeState extends State<Home> {
                         ),
                       ],
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(12.0),
-                      child: Container(
-                        child: Text(
-                            'BlueCascade, along with its greatly escalating exposure and ventures alike, bears a sturdy faith that as goes work load and drudgery,...'),
-                      ),
+                    const Padding(
+                      padding: EdgeInsets.all(12.0),
+                      child: Text(
+                          'BlueCascade, along with its greatly escalating exposure and ventures alike, bears a sturdy faith that as goes work load and drudgery,...'),
                     ),
                     GestureDetector(
                       onTap: () {},
@@ -624,12 +595,12 @@ class _HomeState extends State<Home> {
                                   MaterialPageRoute(
                                   builder: (BuildContext context) => Annual_dinner_first()));
                             },
-                            child: Text("CONTINUE READING"),
                             focusColor: Color(0xff00a0b4),
                             highlightColor: Color(0xff00a0b4),
                             hoverColor: Color(0xff00a0b4),
+                            child: const Text("CONTINUE READING"),
                           ),
-                          Icon(Icons.navigate_next),
+                          const Icon(Icons.navigate_next),
                         ],
                       ),
                     )

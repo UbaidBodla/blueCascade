@@ -2,12 +2,11 @@
 
 import 'package:bluecascade/screens/Career_Pages/Career.dart';
 import 'package:bluecascade/screens/blog_pages/annual_dinner.dart';
-import 'package:bluecascade/screens/blog_pages/annual_dinner_2.0.dart';
+
 import 'package:bluecascade/screens/blog_pages/behaviour.dart';
 import 'package:bluecascade/screens/blog_pages/events.dart';
 import 'package:bluecascade/widgets/appbar.dart';
 import 'package:bluecascade/widgets/drawer.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'blog_pages/formal.dart';
@@ -23,8 +22,8 @@ class _About_USState extends State<About_US> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppbar(),
-      drawer: CustomDrawer(),
+      appBar: const CustomAppbar(),
+      drawer: const CustomDrawer(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -35,8 +34,8 @@ class _About_USState extends State<About_US> {
             Container(
               width: MediaQuery.of(context).size.width * 0.95,
               height: MediaQuery.of(context).size.height * 0.08,
-              color: Color(0xfff2f2f2),
-              child: Center(
+              color: const Color(0xfff2f2f2),
+              child: const Center(
                 child: Text(
                   'ABOUT US',
                   style: TextStyle(
@@ -50,7 +49,7 @@ class _About_USState extends State<About_US> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.01,
             ),
-            Container(
+            SizedBox(
                 width: MediaQuery.of(context).size.width * 0.98,
                 child: Image.asset(
                   "assets/about/about1.jpg",
@@ -60,27 +59,27 @@ class _About_USState extends State<About_US> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.01,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.95,
-              child: Text("Blue Cascade is an emerging e-commerce venture, striving to score a well deserved spot among the e-commerce juggernauts of the time. Piled up from scratch to the giant that it has turned out to be, Blue Cascade has simply not witnessed a diligence deprived team pacing up "
+              child: const Text("Blue Cascade is an emerging e-commerce venture, striving to score a well deserved spot among the e-commerce juggernauts of the time. Piled up from scratch to the giant that it has turned out to be, Blue Cascade has simply not witnessed a diligence deprived team pacing up "
                   "the magnificent feat of conquering the milestones, the team orchestrated."),
             ),
             Divider(
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.01,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.95,
-              child: Text("Blue Cascade strives to bring in the most viable products in the market, providing the best customer service on the go. Blue Cascade persisted among the pool of the already existent bigger fish as per the exquisite service quality that ushered Blue Cascade into the big leagues. Blue Cascade was founded by Salman Altaf, a very young emerging entrepreneur of the time and very few could match the age and skill combination. Along with the likes of Farhan Khalid (co-founder), Umair Asghar(Managing Director) and Muhammad Talal (Chief Technology Officer), Blue Cascade has sights set to explore other ventures "
+              child: const Text("Blue Cascade strives to bring in the most viable products in the market, providing the best customer service on the go. Blue Cascade persisted among the pool of the already existent bigger fish as per the exquisite service quality that ushered Blue Cascade into the big leagues. Blue Cascade was founded by Salman Altaf, a very young emerging entrepreneur of the time and very few could match the age and skill combination. Along with the likes of Farhan Khalid (co-founder), Umair Asghar(Managing Director) and Muhammad Talal (Chief Technology Officer), Blue Cascade has sights set to explore other ventures "
                   "and avenues besides sticking to the shtick that customers come first."),
             ),
             Divider(
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.03,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.95,
-              child: Text("Want to come and join our Team?",style: TextStyle(
+              child: const Text("Want to come and join our Team?",style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold
               ),),
@@ -89,11 +88,11 @@ class _About_USState extends State<About_US> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.01,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.95,
               child:Column(
                 children: [
-                  Text("Check out the current vacancies"+"  ",style: TextStyle(
+                  const Text("Check out the current vacancies"+"  ",style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w300
                   ),),
@@ -102,11 +101,11 @@ class _About_USState extends State<About_US> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (BuildContext context) => Career()));
+                              builder: (BuildContext context) => const Career()));
 
 
                     },
-                    child: Text("here",style: TextStyle(
+                    child: const Text("here",style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.w300,
                         color: Colors.blueAccent
@@ -123,7 +122,7 @@ class _About_USState extends State<About_US> {
               color: Color(0xffededed),
               child: Column(
                 children: [
-                  Container(
+                  SizedBox(
                     width: MediaQuery.of(context).size.width * 0.95,
                     child: RichText(
                       text: const TextSpan(children: [
@@ -151,9 +150,9 @@ class _About_USState extends State<About_US> {
                     color: Colors.transparent,
                     height: MediaQuery.of(context).size.height * 0.02,
                   ),
-                  Container(
+                  SizedBox(
                     width: MediaQuery.of(context).size.width * 0.95,
-                    child: Text("We're a company of pioneers. It's our job to make bold bets, and we get our energy from inventing on behalf of customers. Success is measured against the possible, not the probable. "
+                    child: const Text("We're a company of pioneers. It's our job to make bold bets, and we get our energy from inventing on behalf of customers. Success is measured against the possible, not the probable. "
                         "For today’s pioneers, Blue Cascade provides can excellent platform to grow exponentially.",style: TextStyle(
 
                     ),),
@@ -170,9 +169,11 @@ class _About_USState extends State<About_US> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                            builder: (BuildContext context) => Career()));
-                      }, child: Row(
-                        children: [
+                            builder: (BuildContext context) => const Career()));
+                      },
+                        color: const Color(0xff00bcd4),
+                        height: 50, child: Row(
+                        children: const [
                           Text(""
                               "Our Careers Portal",style: TextStyle(
                               letterSpacing: 2.0
@@ -180,8 +181,6 @@ class _About_USState extends State<About_US> {
                           Icon(Icons.navigate_next)
                         ],
                       ),
-                        color: Color(0xff00bcd4),
-                        height: 50,
                       ),
                     ),
                   ),
@@ -199,7 +198,7 @@ class _About_USState extends State<About_US> {
             ),
             Container(
               width: MediaQuery.of(context).size.width * 0.95,
-              color: Color(0xffededed),
+              color: const Color(0xffededed),
               child: Column(
                 children: [
                   Divider(
@@ -241,18 +240,18 @@ class _About_USState extends State<About_US> {
                         color: Colors.transparent,
                         height: MediaQuery.of(context).size.height * 0.01,
                       ),
-                      Container(
+                      SizedBox(
                         width: MediaQuery.of(context).size.width*0.99,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Container(
+                            SizedBox(
                                 width: MediaQuery.of(context).size.width*0.40,
                                 child: Text('Posted on 06 Feb 2019  / ')),
 
 
-                            Icon(Icons.person_pin_outlined),
-                            GestureDetector(onTap: () {}, child: Text(' bluecas')),
+                            const Icon(Icons.person_pin_outlined),
+                            GestureDetector(onTap: () {}, child: const Text(' bluecas')),
                           ],
                         ),
                       ),
@@ -271,7 +270,7 @@ class _About_USState extends State<About_US> {
                                     MaterialPageRoute(
                                         builder: (BuildContext context) => Annual_dinner_first()));
                               },
-                              child: Text(
+                              child: const Text(
                                 'Annual Dinner',
                                 style: TextStyle(
                                     fontSize: 20, fontWeight: FontWeight.w300),
@@ -280,13 +279,11 @@ class _About_USState extends State<About_US> {
                           ),
                         ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(12.0),
-                        child: Container(
-                          child: Text(
-                              'BlueCascade, along with its greatly escalating exposure and ventures alike, '
-                                  'bears a sturdy faith that as goes work load and drudgery,...'),
-                        ),
+                      const Padding(
+                        padding: EdgeInsets.all(12.0),
+                        child: Text(
+                            'BlueCascade, along with its greatly escalating exposure and ventures alike, '
+                                'bears a sturdy faith that as goes work load and drudgery,...'),
                       ),
                       GestureDetector(
                         onTap: () {},
@@ -300,12 +297,12 @@ class _About_USState extends State<About_US> {
                                         builder: (BuildContext context) => Annual_dinner_first()));
 
                               },
-                              child: Text("CONTINUE READING"),
-                              focusColor: Color(0xff00a0b4),
-                              highlightColor: Color(0xff00a0b4),
-                              hoverColor: Color(0xff00a0b4),
+                              child: const Text("CONTINUE READING"),
+                              focusColor: const Color(0xff00a0b4),
+                              highlightColor: const Color(0xff00a0b4),
+                              hoverColor: const Color(0xff00a0b4),
                             ),
-                            Icon(Icons.navigate_next),
+                            const Icon(Icons.navigate_next),
                           ],
                         ),
                       )
@@ -325,18 +322,18 @@ class _About_USState extends State<About_US> {
                         color: Colors.transparent,
                         height: MediaQuery.of(context).size.height * 0.01,
                       ),
-                      Container(
+                      SizedBox(
                         width: MediaQuery.of(context).size.width*0.99,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Container(
+                            SizedBox(
                                 width: MediaQuery.of(context).size.width*0.40,
                                 child: Text('Posted on 06 Feb 2019  / ')),
 
 
-                            Icon(Icons.person_pin_outlined,size: 15,),
-                            GestureDetector(onTap: () {}, child: Text(' bluecas')),
+                            const Icon(Icons.person_pin_outlined,size: 15,),
+                            GestureDetector(onTap: () {}, child: const Text(' bluecas')),
                           ],
                         ),
                       ),
@@ -346,16 +343,16 @@ class _About_USState extends State<About_US> {
                       ),
                       Row(
                         children: [
-                          Container(
+                          SizedBox(
                             width: MediaQuery.of(context).size.width*0.95,
                             child: GestureDetector(
                               onTap: () {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (BuildContext context) => Behaviour()));
+                                        builder: (BuildContext context) => const Behaviour()));
                               },
-                              child: Text(
+                              child: const Text(
                                 'BEHAVIOURAL GROWTH DISCOURSES/SESSIONS',
                                 style: TextStyle(
                                     fontSize: 20, fontWeight: FontWeight.w300),
@@ -366,9 +363,9 @@ class _About_USState extends State<About_US> {
                       ),
                       Padding(
                         padding: const EdgeInsets.all(12.0),
-                        child: Container(
+                        child: SizedBox(
                           width: MediaQuery.of(context).size.width*0.95,
-                          child: Text(
+                          child: const Text(
                               'Breaking the illusions’ is never the easy part and BlueCascade has grasped the fact already accepting that they need ,...'),
                         ),
                       ),
@@ -381,14 +378,14 @@ class _About_USState extends State<About_US> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (BuildContext context) => Behaviour()));
+                                        builder: (BuildContext context) => const Behaviour()));
                               },
-                              child: Text("CONTINUE READING"),
-                              focusColor: Color(0xff00a0b4),
-                              highlightColor: Color(0xff00a0b4),
-                              hoverColor: Color(0xff00a0b4),
+                              focusColor: const Color(0xff00a0b4),
+                              highlightColor: const Color(0xff00a0b4),
+                              hoverColor: const Color(0xff00a0b4),
+                              child: const Text("CONTINUE READING"),
                             ),
-                            Icon(Icons.navigate_next),
+                            const Icon(Icons.navigate_next),
                           ],
                         ),
                       )
@@ -408,16 +405,16 @@ class _About_USState extends State<About_US> {
                         color: Colors.transparent,
                         height: MediaQuery.of(context).size.height * 0.01,
                       ),
-                      Container(
+                      SizedBox(
                         width: MediaQuery.of(context).size.width*0.99,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text('Posted on 06 Feb 2019  / '),
+                            const Text('Posted on 06 Feb 2019  / '),
 
 
-                            Icon(Icons.person_pin_outlined),
-                            GestureDetector(onTap: () {}, child: Text(' bluecas')),
+                            const Icon(Icons.person_pin_outlined),
+                            GestureDetector(onTap: () {}, child: const Text(' bluecas')),
                           ],
                         ),
                       ),
@@ -434,9 +431,9 @@ class _About_USState extends State<About_US> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (BuildContext context) => Formal()));
+                                        builder: (BuildContext context) => const Formal()));
                               },
-                              child: Text(
+                              child: const Text(
                                 'FORMAL GATHERINGS',
                                 style: TextStyle(
                                     fontSize: 20, fontWeight: FontWeight.w300),
@@ -445,13 +442,11 @@ class _About_USState extends State<About_US> {
                           ),
                         ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(12.0),
-                        child: Container(
-                          child: Text(
-                              'Besides promoting the casual cum corporate face of Blue Cascade, '
-                                  'Blue Cascade pull off arranging and managing formal meetups,...'),
-                        ),
+                      const Padding(
+                        padding: EdgeInsets.all(12.0),
+                        child: Text(
+                            'Besides promoting the casual cum corporate face of Blue Cascade, '
+                                'Blue Cascade pull off arranging and managing formal meetups,...'),
                       ),
                       GestureDetector(
                         onTap: () {},
@@ -462,14 +457,14 @@ class _About_USState extends State<About_US> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (BuildContext context) => Formal()));
+                                        builder: (BuildContext context) => const Formal()));
                               },
-                              child: Text("CONTINUE READING"),
-                              focusColor: Color(0xff00a0b4),
-                              highlightColor: Color(0xff00a0b4),
-                              hoverColor: Color(0xff00a0b4),
+                              focusColor: const Color(0xff00a0b4),
+                              highlightColor: const Color(0xff00a0b4),
+                              hoverColor: const Color(0xff00a0b4),
+                              child: const Text("CONTINUE READING"),
                             ),
-                            Icon(Icons.navigate_next),
+                            const Icon(Icons.navigate_next),
                           ],
                         ),
                       )
@@ -489,16 +484,16 @@ class _About_USState extends State<About_US> {
                         color: Colors.transparent,
                         height: MediaQuery.of(context).size.height * 0.01,
                       ),
-                      Container(
+                      SizedBox(
                         width: MediaQuery.of(context).size.width*0.99,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text('Posted on 06 Feb 2019  / '),
+                            const Text('Posted on 06 Feb 2019  / '),
 
 
-                            Icon(Icons.person_pin_outlined),
-                            GestureDetector(onTap: () {}, child: Text(' bluecas')),
+                            const Icon(Icons.person_pin_outlined),
+                            GestureDetector(onTap: () {}, child: const Text(' bluecas')),
                           ],
                         ),
                       ),
@@ -515,9 +510,9 @@ class _About_USState extends State<About_US> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (BuildContext context) => Events()));
+                                        builder: (BuildContext context) => const Events()));
                               },
-                              child: Text(
+                              child: const Text(
                                 'ORGANIZING AMIABLE EVENTS',
                                 style: TextStyle(
                                     fontSize: 20, fontWeight: FontWeight.w300),
@@ -526,12 +521,10 @@ class _About_USState extends State<About_US> {
                           ),
                         ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(12.0),
-                        child: Container(
-                          child: Text(
-                              'A work load if not performed willingly turns to an unpleasant drudgery which must be cleansed out of the,...'),
-                        ),
+                      const Padding(
+                        padding: EdgeInsets.all(12.0),
+                        child: Text(
+                            'A work load if not performed willingly turns to an unpleasant drudgery which must be cleansed out of the,...'),
                       ),
                       GestureDetector(
                         onTap: () {},
@@ -542,14 +535,14 @@ class _About_USState extends State<About_US> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (BuildContext context) => Events()));
+                                        builder: (BuildContext context) => const Events()));
                               },
-                              child: Text("CONTINUE READING"),
-                              focusColor: Color(0xff00a0b4),
+                              focusColor: const Color(0xff00a0b4),
                               highlightColor: Color(0xff00a0b4),
-                              hoverColor: Color(0xff00a0b4),
+                              hoverColor: const Color(0xff00a0b4),
+                              child: const Text("CONTINUE READING"),
                             ),
-                            Icon(Icons.navigate_next),
+                            const Icon(Icons.navigate_next),
                           ],
                         ),
                       )

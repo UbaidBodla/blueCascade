@@ -1,6 +1,5 @@
 
 import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import '../../widgets/appbar.dart';
@@ -52,8 +51,8 @@ class _Career_PageState extends State<About_Us> {
             ),
             Container(
               width: MediaQuery.of(context).size.width * 0.95,
-              color: Color(0xfff2f2f2),
-              child: Center(
+              color: const Color(0xfff2f2f2),
+              child: const Center(
                 child: Text(
                   'CONTACT US',
                   style: TextStyle(
@@ -70,7 +69,7 @@ class _Career_PageState extends State<About_Us> {
             Container(
               width: MediaQuery.of(context).size.width * 0.95,
               height: MediaQuery.of(context).size.height*0.10,
-              color: Color(0xff00a0b4),
+              color: const Color(0xff00a0b4),
               child: Center(
                 child: RichText(
                   text: const TextSpan(children: [
@@ -97,7 +96,7 @@ class _Career_PageState extends State<About_Us> {
             Container(
               width: MediaQuery.of(context).size.width * 0.95,
               height: MediaQuery.of(context).size.height*0.10,
-              color: Color(0xff00a0b4),
+              color: const Color(0xff00a0b4),
               child: Center(
                 child: RichText(
                   textAlign: TextAlign.center,
@@ -183,7 +182,7 @@ class _Career_PageState extends State<About_Us> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.03,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width*0.95,
               child: TextField(
                 controller: namecontroller,
@@ -195,7 +194,7 @@ class _Career_PageState extends State<About_Us> {
                 },
                 decoration: const InputDecoration(
                     enabledBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(width: 2, color: Colors.black54),
+                      borderSide: BorderSide(width: 2, color: Colors.black54),
                     ),
 
                     labelText: "Enter Name",
@@ -210,7 +209,7 @@ class _Career_PageState extends State<About_Us> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.03,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width*0.95,
               child: TextField(
                 controller: emailcontroller,
@@ -222,7 +221,7 @@ class _Career_PageState extends State<About_Us> {
                 },
                 decoration: const InputDecoration(
                     enabledBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(width: 2, color: Colors.black54),
+                      borderSide: BorderSide(width: 2, color: Colors.black54),
                     ),
 
                     labelText: "Enter Email",
@@ -237,7 +236,7 @@ class _Career_PageState extends State<About_Us> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.03,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width*0.95,
               child: TextField(
                 controller: phonecontroller,
@@ -249,7 +248,7 @@ class _Career_PageState extends State<About_Us> {
                 },
                 decoration: const InputDecoration(
                     enabledBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(width: 2, color: Colors.black54),
+                      borderSide: BorderSide(width: 2, color: Colors.black54),
                     ),
 
                     labelText: "Enter Phone Number",
@@ -267,13 +266,13 @@ class _Career_PageState extends State<About_Us> {
 
             Container(
               width: MediaQuery.of(context).size.width*0.95,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.black12,
                 borderRadius: BorderRadius.all(Radius.circular(20)),
               ),
               child: DateTimeField(
                 //controller: datecontroller,
-                cursorColor: Color(0xFFFF7643),
+                cursorColor: const Color(0xFFFF7643),
                 keyboardType: TextInputType.datetime,
                 onSaved: (newValue) => {
                   // date = newValue,
@@ -291,11 +290,11 @@ class _Career_PageState extends State<About_Us> {
                   date = val!;
                   // return date;
                 },
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                     hintText: 'Pick your Date',
                     labelText: "Date (D/M/Y)",
                     border: OutlineInputBorder(
-                      borderSide: const BorderSide(
+                      borderSide: BorderSide(
                         color: Colors.black,
                         width: 10,
                       ),
@@ -321,7 +320,7 @@ class _Career_PageState extends State<About_Us> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.03,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width*0.95,
               child: TextField(
                 controller: textarea,
@@ -332,13 +331,13 @@ class _Career_PageState extends State<About_Us> {
                   comment=val;
                 },
                 decoration: const InputDecoration(
-                    enabledBorder: const OutlineInputBorder(
+                    enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(width: 2, color: Colors.black54),
                     ),
 
                     labelText: "Your Message",
                     focusedBorder: OutlineInputBorder(
-                        borderSide: const BorderSide(width: 2, color: Colors.black54)
+                        borderSide: BorderSide(width: 2, color: Colors.black54)
                     )
                 ),
 
@@ -349,25 +348,25 @@ class _Career_PageState extends State<About_Us> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.03,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width*0.95,
               child: Column(
                 children: [
                   FlatButton(onPressed: (){
                      if(email==""||email==null&&name==""||name==null){
-                      print("after if");
+
                       showDialog(
                           context: context,
                           builder: (BuildContext){
                             return AlertDialog(
-                              title: Text("ERROR: ",style: TextStyle(
+                              title: const Text("ERROR: ",style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 15,
                               ),),
-                              content: Text("Please fill the required fields (name, email)."),
+                              content: const Text("Please fill the required fields (name, email)."),
                               actions: [
                                 FlatButton(
-                                  child: new Text("Close"),
+                                  child: const Text("Close"),
                                   onPressed: () {
                                     Navigator.of(context).pop();
                                   },
@@ -377,7 +376,7 @@ class _Career_PageState extends State<About_Us> {
                             );
                           }
                       );
-                      print("after dia");
+
 
                     }
                   },
@@ -398,13 +397,13 @@ class _Career_PageState extends State<About_Us> {
                     color: Colors.transparent,
                     height: MediaQuery.of(context).size.height * 0.04,
                   ),
-                  Text("Multan",style: TextStyle(
+                  const Text("Multan",style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 30,
                   ),),
-                  Container(
+                  SizedBox(
                     width: MediaQuery.of(context).size.width*0.30,
-                    child: Divider(
+                    child: const Divider(
                       thickness: 3,
                       color: Colors.black,
                     ),
@@ -420,7 +419,7 @@ class _Career_PageState extends State<About_Us> {
             Container(
               width: MediaQuery.of(context).size.width*0.90,
               alignment: Alignment.topLeft,
-              child: Text("Head Office",style: TextStyle(
+              child: const Text("Head Office",style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w400
               ),
@@ -437,7 +436,7 @@ class _Career_PageState extends State<About_Us> {
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Icon(Icons.location_pin),
                       Text("Model Town, Multan",style: TextStyle(
                           fontSize: 18,
@@ -452,7 +451,7 @@ class _Career_PageState extends State<About_Us> {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Icon(Icons.phone),
                       Text("(061) 6520508",style: TextStyle(
                           fontSize: 18,
@@ -467,7 +466,7 @@ class _Career_PageState extends State<About_Us> {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Icon(Icons.email),
                       Text("info@bluecascade.org",style: TextStyle(
                           fontSize: 18,
@@ -484,36 +483,34 @@ class _Career_PageState extends State<About_Us> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.04,
             ),
-            Container(
-              child: Column(
-                children: [
-                  Divider(
-                    color: Colors.transparent,
-                    height: MediaQuery.of(context).size.height * 0.04,
+            Column(
+              children: [
+                Divider(
+                  color: Colors.transparent,
+                  height: MediaQuery.of(context).size.height * 0.04,
+                ),
+                const Text("Baku",style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 30,
+                ),),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width*0.30,
+                  child: const Divider(
+                    thickness: 3,
+                    color: Colors.black,
                   ),
-                  Text("Baku",style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 30,
-                  ),),
-                  Container(
-                    width: MediaQuery.of(context).size.width*0.30,
-                    child: Divider(
-                      thickness: 3,
-                      color: Colors.black,
-                    ),
-                  ),
-                  Divider(
-                    color: Colors.transparent,
-                    height: MediaQuery.of(context).size.height * 0.03,
-                  ),
+                ),
+                Divider(
+                  color: Colors.transparent,
+                  height: MediaQuery.of(context).size.height * 0.03,
+                ),
 
-                ],
-              ),
+              ],
             ),
             Container(
               width: MediaQuery.of(context).size.width*0.90,
               alignment: Alignment.topLeft,
-              child: Text("Branch Office",style: TextStyle(
+              child: const Text("Branch Office",style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w400
               ),
@@ -530,7 +527,7 @@ class _Career_PageState extends State<About_Us> {
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Icon(Icons.location_pin),
                       Text("Colab, Port Baku, Azerbaijan",style: TextStyle(
                           fontSize: 18,
@@ -545,7 +542,7 @@ class _Career_PageState extends State<About_Us> {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Icon(Icons.email),
                       Text("baku.office@bluecascade.org",style: TextStyle(
                           fontSize: 18,

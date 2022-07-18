@@ -1,6 +1,5 @@
 
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../widgets/appbar.dart';
@@ -41,7 +40,7 @@ class _EventsState extends State<Events> {
               height: MediaQuery.of(context).size.height * 0.08,
               color: const Color(0xfff2f2f2),
               child: const Center(
-                child: const Text(
+                child: Text(
                   'BEHAVIOURAL GROWTH DISCOURSES/SESSIONS',
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -55,7 +54,7 @@ class _EventsState extends State<Events> {
               height: MediaQuery.of(context).size.height * 0.01,
             ),
 
-            Container(
+            SizedBox(
                 width: MediaQuery.of(context).size.width * 0.98,
                 child: Image.asset(
                   "assets/blogp/b5.jpg",
@@ -65,7 +64,7 @@ class _EventsState extends State<Events> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.01,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.98,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -86,7 +85,7 @@ class _EventsState extends State<Events> {
               height: MediaQuery.of(context).size.height * 0.02,
             ),
 
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.95,
               child: const Text(" A work load if not performed willingly turns to an unpleasant drudgery which must be cleansed out of the team in order to promote smooth and outcome-based tasks. BlueCascade, though still spreading its wings delving and molding into a corporate structure with every department being re-branded and being served with a viable decently operating framework, the team requires to cool off the steam after executing the operations to perfection on a daily basis. Perfection is a crucial part of all the processes and human body is no exception. BlueCascade ensures that the team enjoys a sound hygiene planning sports galas and hangouts that jot down a special place for "
                   "BlueCascade in the memory lane for each member of the team. "),
@@ -96,7 +95,7 @@ class _EventsState extends State<Events> {
               height: MediaQuery.of(context).size.height * 0.02,
             ),
 
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.95,
               child: const Text(" BlueCascade produces the most stress-free workplace inducing the sense of empowerment within each of the team members, without any indifference. With outcome-based tasks assigned to the teams within BlueCascade, it is much easier to manage the work load and set apart time for these outside sports activities. The motive for these games beside being the usual bookworm-ish and purely technical, is to bound the team together inducing a sense of sportsmanship which gives way to the team spirit that comes in handy promoting efficiency of the team altogether. Curating the team into a sturdy bond switches the spirits up high as each member of the team not only "
                   "empowers his/her personal self but exerts force to propel BlueCascade as a whole."),
@@ -105,7 +104,7 @@ class _EventsState extends State<Events> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.95,
               child: const Text("LEAVE A COMMENT",style: TextStyle(
                 fontWeight: FontWeight.bold,
@@ -117,7 +116,7 @@ class _EventsState extends State<Events> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width*0.95,
               child: TextField(
                 controller: textarea,
@@ -128,13 +127,13 @@ class _EventsState extends State<Events> {
                   comment=val;
                 },
                 decoration: const InputDecoration(
-                    enabledBorder: const OutlineInputBorder(
+                    enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(width: 2, color: Colors.black54),
                     ),
 
                     labelText: "Enter Comment",
                     focusedBorder: OutlineInputBorder(
-                        borderSide: const BorderSide(width: 2, color: Colors.black54)
+                        borderSide: BorderSide(width: 2, color: Colors.black54)
                     )
                 ),
 
@@ -144,7 +143,7 @@ class _EventsState extends State<Events> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width*0.95,
               child: TextField(
                 controller: namecontroller,
@@ -154,13 +153,13 @@ class _EventsState extends State<Events> {
                   name=val;
                 },
                 decoration: const InputDecoration(
-                    enabledBorder: const OutlineInputBorder(
+                    enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(width: 2, color: Colors.black54),
                     ),
 
                     labelText: "Enter Name",
                     focusedBorder: OutlineInputBorder(
-                        borderSide: const BorderSide(width: 2, color: Colors.black54)
+                        borderSide: BorderSide(width: 2, color: Colors.black54)
                     )
                 ),
 
@@ -170,7 +169,7 @@ class _EventsState extends State<Events> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width*0.95,
               child: TextField(
                 controller: emailcontroller,
@@ -182,7 +181,7 @@ class _EventsState extends State<Events> {
                 },
                 decoration: const InputDecoration(
                     enabledBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(width: 2, color: Colors.black54),
+                      borderSide: BorderSide(width: 2, color: Colors.black54),
                     ),
 
                     labelText: "Enter Email",
@@ -197,7 +196,7 @@ class _EventsState extends State<Events> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width*0.95,
               child: TextField(
                 controller: websitecontroller,
@@ -223,26 +222,26 @@ class _EventsState extends State<Events> {
               color: Colors.transparent,
               height: MediaQuery.of(context).size.height * 0.05,
             ),
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width*0.95,
               child: Column(
                 children: [
                   FlatButton(onPressed: (){
-                    print("object");
+
                     if(email==""||email==null&&name==""||name==null){
-                      print("after if");
+
                       showDialog(
                           context: context,
                           builder: (BuildContext){
                             return AlertDialog(
-                              title: Text("ERROR: ",style: TextStyle(
+                              title: const Text("ERROR: ",style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 15,
                               ),),
-                              content: Text("Please fill the required fields (name, email)."),
+                              content: const Text("Please fill the required fields (name, email)."),
                               actions: [
                                 FlatButton(
-                                  child: new Text("Close"),
+                                  child: const Text("Close"),
                                   onPressed: () {
                                     Navigator.of(context).pop();
                                   },
@@ -252,7 +251,7 @@ class _EventsState extends State<Events> {
                             );
                           }
                       );
-                      print("after dia");
+
 
                     }
                   },
@@ -279,7 +278,7 @@ class _EventsState extends State<Events> {
               color: Colors.grey,
             ),
             color: Colors.grey,
-            borderRadius: const BorderRadius.all(const Radius.circular(30))
+            borderRadius: const BorderRadius.all(Radius.circular(30))
         ),
 
         child: IconButton(
